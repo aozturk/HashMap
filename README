@@ -1,0 +1,8 @@
+======================
+Only simple Hash Map C++ implementation for now. 
+
+// SimpleHashMap class
+SimpleHashMap.h
+
+// Test and usage of HashMap class
+SimpleHashMapTest.cpp
