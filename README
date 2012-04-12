@@ -1,5 +1,6 @@
-======================
-Only simple Hash Map C++ implementation for now. 
+======================================================================
+====== Very simple yet complete Hash Map implementation in C++. ======
+======================================================================
 
 // SimpleHashMap class
 SimpleHashMap.h
