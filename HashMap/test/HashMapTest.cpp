@@ -32,5 +32,5 @@ int main()
 	result = hmap.get(3, value);
 	assert(!result);
 
-	cout << "OK!" << endl;
+	cout << "All tests passed!" << endl;
 }
