@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <assert.h>
-#include "HashMap.h"
+#include "../src/HashMap.h"
 
 using namespace std;
 
