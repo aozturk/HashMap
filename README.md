@@ -1,9 +1,13 @@
 Basic Hash Map Implementation in C++
 ------------------------------------
 
-Basic Usage:
+Compile and run tests
 
-Define hash function by implementing operator()
+	make
+
+### Example Usage
+
+Define a hash function by overloading operator() for integer type key
 
 	struct MyKeyHash {
     	unsigned long operator()(const int& k) const
@@ -12,11 +16,11 @@ Define hash function by implementing operator()
     	}
 	};
 	
-Declare a hashmap with integer type key and string type value
+Declare a hashmap with integer type key and string type value pair
 
 	HashMap<int, string, MyKeyHash> hmap;
 
-Put a key-value pair
+Put a key-value pair into the hashmap
 
 	hmap.put(1, "1");
 
