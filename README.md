@@ -28,3 +28,7 @@ Get the value by key; returns true if successful with value updated
 
 	string value;
 	bool result = hmap.get(2, value);
+
+## License ##
+
+Licensed under [the Apache 2.0 license](LICENSE). 
