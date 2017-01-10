@@ -55,7 +55,8 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 file(GLOB_RECURSE COV_SRCS "hashmap/*")
 
-install(DIRECTORY hashmap DESTINATION "include")
+install(DIRECTORY hashmap DESTINATION "include"
+	FILES_MATCHING PATTERN "*.h")
 
 if(TESTING)
 	enable_testing()
