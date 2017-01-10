@@ -1,0 +1,20 @@
+language: c
+sudo: false
+install:
+  - pip install --user cpp-coveralls
+script:
+  - cmake -DCMAKE_BUILD_TYPE=Profile -DTESTING=ON -DFORMAT=ON .
+  - make
+  - make check_format
+  - ctest -V
+after_success:
+  - cpp-coveralls -i matrix
+env:
+  global:
+  - export COVERALLS_SERVICE_NAME=travis-ci
+    # TODO
+  - secure: ""
+addons:
+  apt:
+    packages:
+      - cmake
