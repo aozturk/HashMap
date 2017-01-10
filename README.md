@@ -3,10 +3,6 @@
 Basic Hash Map Implementation in C++
 ------------------------------------
 
-## Install
-
-This is a header only library, so no build step is required.
-
 ## Usage
 
 ### Example
@@ -43,16 +39,34 @@ Get the value by key; returns true if successful with value updated
 	bool result = hmap.get(2, value);
 ```
 
-### Testing
 
-Starting in the root directory of the repository:
+## Building
+
+This is a header only library, so no compile step is required.
+To use the functionality below however, you must use cmake to generate
+the makefiles.
 
 ```bash
-	mkdir bulid
-	cd build
-	cmake ..
-	make
+mkdir build
+cd build
+cmake ..
 ```
+
+## Install
+
+```bash
+make install
+```
+
+You can also create packages in the build directory.
+See cpack for details, here is an example for ubuntu.
+
+```bash
+cpack -G DEB
+sudo dpkg -i *.deb
+```
+
+### Testing
 
 From build directory:
 
