@@ -24,10 +24,9 @@ template <typename K, typename V, size_t tableSize, typename F = KeyHash<K, tabl
 class HashMap
 {
 public:
-    HashMap()
+    HashMap() :
+		table()
     {
-        // construct zero initialized hash table of size
-        table = new HashNode<K, V> *[tableSize]();
     }
 
     ~HashMap()
@@ -44,9 +43,6 @@ public:
 
             table[i] = NULL;
         }
-
-        // destroy the hash table
-        delete [] table;
     }
 
     bool get(const K &key, V &value)
@@ -124,6 +120,6 @@ public:
 
 private:
     // hash table
-    HashNode<K, V> **table;
+    HashNode<K, V> *table[tableSize];
     F hashFunc;
 };
