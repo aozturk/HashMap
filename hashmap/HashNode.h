@@ -16,6 +16,8 @@
  *
  */
 
+#include <cstddef>
+
 // Hash node class template
 template <typename K, typename V>
 class HashNode
