@@ -59,4 +59,7 @@ private:
     V _value;
     // next bucket with the same key
     HashNode *_next;
+    // disallow copy and assignment
+    HashNode(const HashNode &);
+    HashNode & operator=(const HashNode &);
 };

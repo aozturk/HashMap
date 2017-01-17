@@ -29,6 +29,7 @@ public:
     };
     template <class T>
     Param(const char * name, T defaultValue, Type type) :
+        _def(),
         _type(type)
     {
         if (type == FLOAT) {
