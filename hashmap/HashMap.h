@@ -121,6 +121,8 @@ public:
     }
 
 private:
+	HashMap(const HashMap & other);
+	const HashMap & operator=(const HashMap & other);
     // hash table
     HashNode<K, V> *table[tableSize];
     F hashFunc;

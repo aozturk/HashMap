@@ -69,7 +69,7 @@ private:
     Param(const Param & p);
     Param & operator=(const Param & p);
 };
-Param::DictType Param::_dict = Param::DictType();
+Param::DictType Param::_dict;
 
 Param p1("param1", 1.0f, Param::FLOAT);
 Param p2("param2", 2, Param::INT);
