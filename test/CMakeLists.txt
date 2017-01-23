@@ -1,5 +1,6 @@
 set(tests
 	simple
+	complex
 	)
 
 add_custom_target(test_build)

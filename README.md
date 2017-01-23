@@ -1,4 +1,4 @@
-# HashMap [![Build Status](https://travis-ci.org/aozturk/HashMap.svg?branch=master)](https://travis-ci.org/aozturk/HashMap) [![Coverage Status](https://coveralls.io/repos/aozturk/HashMap/badge.svg?branch=master&service=github)](https://coveralls.io/github/oazturk/hashMap?branch=master)
+# HashMap [![Build Status](https://travis-ci.org/aozturk/HashMap.svg?branch=master)](https://travis-ci.org/aozturk/HashMap) [![Coverage Status](https://coveralls.io/repos/aozturk/HashMap/badge.svg?branch=master&service=github)](https://coveralls.io/github/aozturk/hashMap?branch=master)
 
 Basic Hash Map Implementation in C++
 ------------------------------------

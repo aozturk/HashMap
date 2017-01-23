@@ -18,16 +18,18 @@
 
 #include "HashNode.h"
 #include "KeyHash.h"
+#include <cstddef>
+
 
 // Hash map class template
 template <typename K, typename V, size_t tableSize, typename F = KeyHash<K, tableSize> >
 class HashMap
 {
 public:
-    HashMap()
+    HashMap() :
+        table(),
+        hashFunc()
     {
-        // construct zero initialized hash table of size
-        table = new HashNode<K, V> *[tableSize]();
     }
 
     ~HashMap()
@@ -44,9 +46,6 @@ public:
 
             table[i] = NULL;
         }
-
-        // destroy the hash table
-        delete [] table;
     }
 
     bool get(const K &key, V &value)
@@ -123,7 +122,9 @@ public:
     }
 
 private:
+    HashMap(const HashMap & other);
+    const HashMap & operator=(const HashMap & other);
     // hash table
-    HashNode<K, V> **table;
+    HashNode<K, V> *table[tableSize];
     F hashFunc;
 };

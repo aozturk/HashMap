@@ -31,6 +31,4 @@ int main()
     hmap.remove(3);
     result = hmap.get(3, value);
     assert(!result);
-
-    cout << "All tests passed!" << endl;
 }

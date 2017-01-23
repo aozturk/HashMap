@@ -29,6 +29,7 @@ string(REPLACE ";" " " CMAKE_CXX_FLAGS_PROFILE "${CMAKE_CXX_FLAGS_PROFILE}")
 
 set(CMAKE_CXX_FLAGS
 	${CMAKE_CXX_FLAGS}
+	-Weffc++
 	-Wall
 	-Wno-sign-compare
 	-Wextra
