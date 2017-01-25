@@ -35,7 +35,7 @@ public:
     ~HashMap()
     {
         // destroy all buckets one by one
-        for (int i = 0; i < tableSize; ++i) {
+        for (size_t i = 0; i < tableSize; ++i) {
             HashNode<K, V> *entry = table[i];
 
             while (entry != NULL) {
