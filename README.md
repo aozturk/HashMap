@@ -7,40 +7,38 @@ Basic Hash Map Implementation in C++
 
 ### Example
 
-Define a hash function by overloading operator() for integer type key
+Define a hash function by overloading operator() for integer typed key
 
 ```c++
-
-	struct MyKeyHash {
-    	unsigned long operator()(const int& k) const
-    	{	
-        	return k % 10;
+struct MyKeyHash {
+	unsigned long operator()(const int& key) const
+	{
+		return key % 10;
     	}
-	};
+};
 ```
 	
-Declare a hashmap with integer type key and string type value pair
+Declare a hash map with integer typed key and string type value pair
 
 ```c++
-	size_t tableSize = 10;
-	HashMap<int, string, tableSize, MyKeyHash> hmap;
+size_t tableSize = 10;
+HashMap<int, string, tableSize, MyKeyHash> hmap;
 ```
 
 Put a key-value pair into the hashmap
 
 ```c++
-	hmap.put(1, "1");
+hmap.put(1, "1");
 ```
 
 Get the value by key; returns true if successful with value updated
 
 ```c++
-	string value;
-	bool result = hmap.get(2, value);
+string value;
+bool result = hmap.get(2, value);
 ```
 
-
-## Building
+## Build
 
 This is a header only library, so no compile step is required.
 To use the functionality below however, you must use cmake to generate
@@ -58,7 +56,7 @@ cmake ..
 make install
 ```
 
-You can also create packages in the build directory.
+(Optional) You can also create packages in the build directory.
 See cpack for details, here is an example for ubuntu.
 
 ```bash
@@ -66,18 +64,18 @@ cpack -G DEB
 sudo dpkg -i *.deb
 ```
 
-### Testing
+### Test
 
-From build directory:
+From build directory, run tests:
 
 ```bash
-	make test
+make test
 ```
 
-You can also check test coverage:
+You can also check the test coverage:
 
 ```bash
-	make coverage
+make coverage
 ```
 
 ## License
