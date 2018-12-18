@@ -24,7 +24,7 @@ class HashNode
 {
 public:
     HashNode(const K &key, const V &value) :
-        _key(key), _value(value), _next(NULL)
+        _key(key), _value(value), _next(nullptr)
     {
     }
 
